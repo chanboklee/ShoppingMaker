@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ShoppingMaker
+Bundle-SymbolicName: ShoppingMaker
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Automatic-Module-Name: ShoppingMaker
+Export-Package: com.shopping.maker,
+ com.shopping.maker.controller,
+ com.shopping.maker.entity,
+ com.shopping.maker.repository,
+ com.shopping.maker.repository.menu,
+ com.shopping.maker.service,
+ com.shopping.maker.service.menu,
+ com.shopping.maker.util,
+ com.shopping.maker.vo
