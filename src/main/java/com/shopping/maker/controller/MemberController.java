@@ -133,7 +133,7 @@ public class MemberController {
 	@ResponseBody
 	public Map<String, String> memberModify(@Valid MemberModifyVO memberModifyVo) throws Exception{
 		
-		Map<String, String> map = new HashMap();
+		Map<String, String> map = new HashMap<>();
 		
 		try {
 			

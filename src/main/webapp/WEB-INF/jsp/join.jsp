@@ -33,8 +33,6 @@ $(document).ready(function(){
 			url: '/memberJoin.do',
 			data: serialLize,
 			success: function(data){
-				console.log("data.msg");
-				console.log(data.msg);
 				if(!data.msg){
 					alert("회원가입에 실패하셨습니다. 해당 내용은 아래와 같습니다 = "+data.msg);
 				}else{

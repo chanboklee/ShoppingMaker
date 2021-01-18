@@ -38,6 +38,11 @@ $(document).ready(function(){
 		console.log("아이템 추가 버튼 클릭");
 		location.href = "/regItems.do";
 	});
+	
+	$("#btnRegMenu").on("click", function(){
+		console.log("메뉴 등록 버튼 클릭");
+		location.href = "/menuList.do";
+	});
 });	
 
 </script>
@@ -107,6 +112,9 @@ $(document).ready(function(){
 						<li style="display: inline-block; padding: 0 10px; font-size: 12px;">
 							<a id="btnRegItems" href="#">ADD ITEMS</a>
 						</li>
+						<li style="display: inline-block; padding: 0 10px; font-size: 12px;">
+							<a id="btnRegMenu" href="#">ADD MENU</a>
+						</li>						
 					</ul>
 				</div>
 			</div>
