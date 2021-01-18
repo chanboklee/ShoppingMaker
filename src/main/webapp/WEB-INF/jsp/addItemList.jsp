@@ -105,7 +105,11 @@ $(document).ready(function(){
 							<tr>
 								<td>*상품명</td>
 								<td><input type="text" name="itemName"></td>
-							</tr>							
+							</tr>
+							<tr>
+								<td>*품번</td>
+								<td><input type="text" name="itemNo"></td>
+							</tr>						
 							<tr>
 								<td>*상품 갯수</td>
 								<td><input type="text" name="count"></td>

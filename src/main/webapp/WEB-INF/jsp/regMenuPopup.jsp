@@ -18,7 +18,6 @@ $(document).ready(function(){
 		var serialLize = $("#regMenuForm").serialize();
 		alert(serialLize);
 		
-		
 		$.ajax({
 			dataType: 'json',
 			type: 'post',
@@ -27,7 +26,7 @@ $(document).ready(function(){
 			success: function(data){
 				alert(data.msg);
 				window.opener.location.reload();
-				window.close();
+				self.close();
 			}
 		});
 	});

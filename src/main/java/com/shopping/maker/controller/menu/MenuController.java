@@ -1,4 +1,4 @@
-package com.shopping.maker.controller;
+package com.shopping.maker.controller.menu;
 
 import java.util.HashMap;
 import java.util.List;

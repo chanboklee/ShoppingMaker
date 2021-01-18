@@ -22,11 +22,12 @@ public class Item {
     @Column(name = "item_id")
     private Long id;
 
-    private String brandName;
-    private String itemName;
-    private int count;
-    private int price;
-    private String itemImg;
+    private String brandName;		// 브랜드명
+    private String itemName;		// 상품명
+    private String itemImg;			// 상품 이미지
+    private String itemNo;			// 상품 품번
+    private int count;				// 갯수
+    private int price;				// 가격
 
     @Enumerated(EnumType.STRING)
     private ItemSize itemSize;
@@ -34,16 +35,13 @@ public class Item {
     @Enumerated(EnumType.STRING)
     private ItemType itemType;
 
-    public Item(String itemName){
-        this(null, itemName, 0, 0 , null, null ,null);
-    }
-
-    public Item(String brandName, String itemName, int count, int price, String ItemImg, ItemSize itemSize, ItemType itemType) {
+    public Item(String brandName, String itemName, String ItemImg, String itemNo, int count, int price,  ItemSize itemSize, ItemType itemType) {
         this.brandName = brandName;
         this.itemName = itemName;
+        this.itemImg = ItemImg;
+        this.itemNo = itemNo;
         this.count = count;
         this.price = price;
-        this.itemImg = ItemImg;
         this.itemSize = itemSize;
         this.itemType = itemType;
     }

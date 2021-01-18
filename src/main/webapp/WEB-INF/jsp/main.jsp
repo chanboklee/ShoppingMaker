@@ -36,7 +36,7 @@ $(document).ready(function(){
 	
 	$("#btnRegItems").on("click", function(){
 		console.log("아이템 추가 버튼 클릭");
-		location.href = "/regItems.do";
+		location.href = "/addItemList.do";
 	});
 	
 	$("#btnRegMenu").on("click", function(){

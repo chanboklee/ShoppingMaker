@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.shopping.maker.entity.Menu;
 import com.shopping.maker.repository.menu.MenuRepository;
+import com.shopping.maker.vo.MenuVO;
 
 @Service
 @Transactional
@@ -15,6 +16,12 @@ public class MenuRepositoryImpl {
 
 	@Autowired
 	private MenuRepository menuRepository;
+	
+	public List<MenuVO> findAllMenuList(){
+		List<MenuVO> list = menuRepository.findAllMenuList();
+		
+		return list;
+	}
 	
 	public List<Menu> allMenuList() {
 		List<Menu> list = menuRepository.findByCollapseYn("Y");

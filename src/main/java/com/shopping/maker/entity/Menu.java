@@ -12,13 +12,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Getter @Setter
+@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Menu {
 	
 	@Id @GeneratedValue
-	@Column(name = "member_id")
+	@Column(name = "menu_id")
 	private Long id;
 	
 	@Column(name = "menu_nm")

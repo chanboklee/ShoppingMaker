@@ -1,4 +1,4 @@
-package com.shopping.maker.controller;
+package com.shopping.maker.controller.member;
 
 import java.io.File;
 import java.util.HashMap;
@@ -145,37 +145,5 @@ public class MemberController {
 		}
 						
 		return map;
-	}
-	
-	@RequestMapping("/regItems.do")
-	public String regItems() {
-		return "registerItems";
-	}
-	
-	
-	@RequestMapping("/itemUpload.do")
-	public String itemUpload(@RequestParam MultipartFile files) throws Exception{
-	
-		String sourceFileName = files.getOriginalFilename();
-		String sourceFileNameExtension = FilenameUtils.getExtension(sourceFileName).toLowerCase();
-		String fileUrl = "D:\\pjt_tool\\AttachFile";
-		File destinationFile;
-		String destinationFileName;
-		try {
-			
-			do {
-				destinationFileName = RandomStringUtils.randomAlphanumeric(32) + "." + sourceFileNameExtension;
-				destinationFile = new File(fileUrl + destinationFileName);	
-			} while (destinationFile.exists());
-			
-			
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-		
-		return "";
-	}
-	
+	}	
 }
