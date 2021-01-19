@@ -125,7 +125,27 @@ $(document).ready(function(){
 							<tr>
 								<td>*상품 종류</td>
 								<td><input type="text" name="itemType"></td>
-							</tr>		
+							</tr>
+							<tr>
+								<td>*상품 분류(대분류)</td>
+								<td>
+									<select>
+										<c:forEach var="data" items="${mainCategory }" varStatus="status">
+											<option value="${data.menuNm }">${data.menuNm }</option>
+										</c:forEach>
+									</select>
+								</td>
+							</tr>
+							<tr>																<tr>
+								<td>*상품 분류(중분류)</td>
+								<td>
+									<select>
+										<c:forEach var="data" items="${middleCategory }" varStatus="status">
+											<option value="${data.menuNm }">${data.menuNm }</option>
+										</c:forEach>
+									</select>
+								</td>
+							</tr>
 							<tr>
 								<td>*이미지 업로드</td>
 								<td><input type="text" name="itemImg"></td>

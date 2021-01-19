@@ -1,6 +1,5 @@
 package com.shopping.maker.controller.member;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -9,17 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 
-import com.google.common.io.Files;
 import com.shopping.maker.entity.Member;
 import com.shopping.maker.service.MemberRepositoryImpl;
 import com.shopping.maker.vo.MemberModifyVO;
@@ -30,20 +24,6 @@ public class MemberController {
 
 	@Autowired
 	private MemberRepositoryImpl memberRepositoryImpl;
-
-	@RequestMapping("/")
-	public String main(HttpServletRequest req, Model model) throws Exception{
-		HttpSession session = req.getSession(true);
-		
-		if(session.getAttribute("userSession") != null) {
-			MemberVO userSession = (MemberVO) session.getAttribute("userSession");
-			
-			model.addAttribute("userVo", userSession);
-			System.out.println("userSession = "+userSession);
-		}
-				
-		return "main";
-	}
 	
 	@RequestMapping("/login.do")
 	public String login(HttpServletRequest req, Model model) throws Exception{

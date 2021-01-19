@@ -1,6 +1,7 @@
 package com.shopping.maker.controller.item;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
@@ -25,19 +26,35 @@ public class ItemController {
 	@RequestMapping("/addItemList.do")
 	public String itemList(Model model) throws Exception{
 		
+		List<MenuVO> mainCategory = new ArrayList<>();
+		List<MenuVO> middleCategory = new ArrayList<>();
+		
 		try {
 			
 			List<MenuVO> result = menuRepositoryImpl.findAllMenuList();
+
 			
 			for(int i=0; i<result.size(); i++) {
-				System.out.println("메뉴명="+result.get(i).getMenuNm());
+				System.out.println("menuNm="+result.get(i).getMenuNm()+", collapseYn="+result.get(i).getCollapseYn());
 			}
 			
+			  for(int i=0; i<result.size(); i++) {
+				  if(result.get(i).getCollapseYn().equals("Y")) {
+					  System.out.println("대분류 타겠지"); 
+					  mainCategory.add(new MenuVO(result.get(i).getMenuNm(), result.get(i).getCollapseYn()));
+				  }else {
+					  System.out.println("중분류 타겠지");
+				  } 
+			  }
+			 
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+		
+		model.addAttribute("mainCategory", mainCategory);
+		model.addAttribute("middleCategory", middleCategory);
 		
 		return "addItemList";
 	}

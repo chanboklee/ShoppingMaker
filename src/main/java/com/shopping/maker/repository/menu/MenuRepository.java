@@ -14,6 +14,6 @@ public interface MenuRepository extends JpaRepository<Menu, Long>{
 	
 	List<Menu> findByCollapseYn(String collpaseYn);
 
-	@Query("SELECT new com.shopping.maker.vo.MenuVO(m.menuNm) FROM Menu m")
+	@Query("SELECT new com.shopping.maker.vo.MenuVO(m.menuNm, m.collapseYn) FROM Menu m")
 	List<MenuVO> findAllMenuList();
 }

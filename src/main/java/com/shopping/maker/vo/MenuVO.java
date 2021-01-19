@@ -16,7 +16,8 @@ public class MenuVO {
 	private String collapseYn;		// 대분류(Y), 중분류(N)
 	private Long parentId;			// 대분류의 자식 구분
 	
-	public MenuVO(String menuNm) {
+	public MenuVO(String menuNm, String collapseYn) {
 		this.menuNm = menuNm;
+		this.collapseYn = collapseYn;
 	}
 }
