@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -7,16 +7,16 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/common.css">
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>ShoppingMaker</title>
 </head>
 <script type="text/javascript">
 
 </script>
-	<div style="max-width: 280px; width: 15%; height: 100%; box-sizing: border-box; float: left;">
-		<div style="position: fixed; left: 40px; top: 130px; width: 185px;">
+	<div id="sideNav">
+		<div id="sideNavPos">
 			<ul>
-				<li style="font-size: 25px;">
+				<li class="fs25">
 					<a href="#">ShoppingMaker</a>
 				</li>
 				<li>
@@ -24,6 +24,11 @@
 				</li>
 				<li>
 					<a href="#">Store</a>
+					<ul>
+						<c:forEach var="mainCategory" items="${category.mainCategory }" varStatus="status">
+							<li>${mainCategory.menuNm }</li>								
+						</c:forEach>
+					</ul>
 				</li>
 				<li>
 					<a href="#">Collection</a>

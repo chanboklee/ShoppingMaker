@@ -130,7 +130,7 @@ $(document).ready(function(){
 								<td>*상품 분류(대분류)</td>
 								<td>
 									<select>
-										<c:forEach var="data" items="${mainCategory }" varStatus="status">
+										<c:forEach var="data" items="${category.mainCategory }" varStatus="status">
 											<option value="${data.menuNm }">${data.menuNm }</option>
 										</c:forEach>
 									</select>
@@ -140,7 +140,7 @@ $(document).ready(function(){
 								<td>*상품 분류(중분류)</td>
 								<td>
 									<select>
-										<c:forEach var="data" items="${middleCategory }" varStatus="status">
+										<c:forEach var="data" items="${category.middleCategory }" varStatus="status">
 											<option value="${data.menuNm }">${data.menuNm }</option>
 										</c:forEach>
 									</select>

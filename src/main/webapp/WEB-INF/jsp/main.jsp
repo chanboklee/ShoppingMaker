@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/common.css">
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <meta charset="UTF-8">
-<title>ShopStyle</title>
+<title>ShoppingMaker</title>
 </head>
 <script type="text/javascript">
 
